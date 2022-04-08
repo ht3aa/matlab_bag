@@ -12,10 +12,24 @@
 .container object {
     width: 60%;
     min-width: 350px;
+    text-align: center;
+}
+
+.container object h5 {
+    color: white;
+    margin-top: 50px;
+}
+
+.container object a {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 1100px) {
     .container {
         height: auto;
     }    
+    .container object {
+        margin-top: 20px;
+    }
 }

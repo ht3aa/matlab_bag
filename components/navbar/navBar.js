@@ -35,7 +35,7 @@ export default function NavBar() {
             {showNavigationList && <nav className={navBarStyles.mobileNavigationList}>
                 <ul className={navBarStyles.mobileNavigationListUl}>
                     <Link href='/'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph + " navigationActive"}>الصفحة الرئيسية</p></li></Link>
-                    <Link href='/'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph}>من نحن</p></li></Link>
+                    <Link href='/aboutUs'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph}>من نحن</p></li></Link>
                 </ul>
             </nav>}
         </div>
