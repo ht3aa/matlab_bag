@@ -4,7 +4,7 @@ import lectureStyles from "../styles/Lecture.module.css";
 export default function Lecture() {
   const route = useRouter()
   const { file, video_link } = route.query;
-    console.log(file);
+
   return (
     <div className={lectureStyles.container}>
       <button onClick={() => route.push('/')} className="backButton">
