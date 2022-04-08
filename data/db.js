@@ -4,27 +4,9 @@ export const db = {
             id: 0,
             lesson_name: "مقدمة",
             lesson_number: "#0",
-            description: "مشكبلنمشس سمكشبي تنمسشنيب نمشكسبي شكمستبي كمشسن ت سبت ميسشب تمسشك بتي ت",
-            file_path: "/files/report_1.pdf",
+            description: "مقدمة عن برنامج الماتلاب. أنواع أستخدامات الشائعة للماتلاب. قوة أستخدام الماتلاب. و غيرها الكثير",
+            file_path: "introduction",
             video_path: "",
         },
-    ],
-        "الجزء الثاني": [
-        {
-            id: 1,
-            lesson_name: "مقدمة",
-            lesson_number: "",
-            description: "مشكبلنمشس سمكشبي تنمسشنيب نمشكسبي شكمستبي كمشسن ت سبت ميسشب تمسشك بتي ت",
-            file_path: "",
-            video_path: "",
-        },
-                {
-            id: 2,
-            lesson_name: "مقدمة",
-            lesson_number: "",
-            description: "مشكبلنمشس سمكشبي تنمسشنيب نمشكسبي شكمستبي كمشسن ت سبت ميسشب تمسشك بتي ت",
-            file_path: "",
-            video_path: "",
-        }
     ]
 }

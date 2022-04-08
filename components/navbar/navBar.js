@@ -5,14 +5,22 @@ import { useRef } from "react";
 import { useState } from "react";
 import makeItActive from "./makeItActive";
 import Link from "next/dist/client/link";
+import { useEffect } from "react";
 
 export default function NavBar() {
     const [showNavigationList, setShowNavigationList] = useState(false);
+    const [navAcitveClass, setNavActiveClass] = useState(" navigationActive");
     const hamContainerRef = useRef();
     function toggleHamAndShowHam() {
         toggleHamAnimation(hamContainerRef.current);
         setShowNavigationList(!showNavigationList);
     }
+
+    useEffect(() => {
+        if(parseInt(screen.width) <= 650) {
+            setNavActiveClass(" ");
+        }
+    }, [])
     return (
         <div className={navBarStyles.navbar}>
             <div className={navBarStyles.logoBox}>
@@ -23,7 +31,7 @@ export default function NavBar() {
                 makeItActive(e.target);
             }} className={navBarStyles.navigationList}>
                 <Link href='/aboutUs'><li><p className={navBarStyles.navigationListParagraph}>من نحن</p></li></Link>
-                <Link href='/'><li><p className={navBarStyles.navigationListParagraph + " navigationActive"}>الصفحة الرئيسية</p></li></Link>
+                <Link href='/'><li><p className={navBarStyles.navigationListParagraph + navAcitveClass}>الصفحة الرئيسية</p></li></Link>
             </ul>
             <div ref={hamContainerRef} className="ham_Container" onClick={toggleHamAndShowHam}>
                     <div className="circle"></div>
@@ -34,7 +42,7 @@ export default function NavBar() {
             </div>
             {showNavigationList && <nav className={navBarStyles.mobileNavigationList}>
                 <ul className={navBarStyles.mobileNavigationListUl}>
-                    <Link href='/'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph + " navigationActive"}>الصفحة الرئيسية</p></li></Link>
+                    <Link href='/'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph + navAcitveClass}>الصفحة الرئيسية</p></li></Link>
                     <Link href='/aboutUs'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph}>من نحن</p></li></Link>
                 </ul>
             </nav>}
