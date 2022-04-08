@@ -10,9 +10,11 @@ export default function Lecture() {
       <button onClick={() => route.push('/')} className="backButton">
         <i className="fa-solid fa-arrow-left"></i>
       </button>
-      <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
-      width="350" height="315" frameBorder="0" allowFullScreen></iframe>
-      <embed src={file} min-width="350" height="600"/>
+      <iframe width="350" height="315" src="https://www.youtube.com/embed/m4-HM_sCvtQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <object data="mypdf.pdf" type="application/pdf" frameBorder="0" >
+        <embed src={file} width="100%" height="600px"/> 
+      </object>
+
     </div>
   )
 }
