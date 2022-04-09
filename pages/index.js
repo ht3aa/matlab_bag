@@ -42,7 +42,7 @@ export default function Home() {
                     <div className={homeStyles.cardContent}>
                       <h4>{ card.lesson_name }</h4>
                       <p>{ card.description }</p>
-                      <Link href={`/lecture?file=/files/${card.file_path}.pdf&video_link=https://asdfasdf`} passHref ><button>أبدأ الدرس</button></Link>
+                      <Link href={`/lecture?file=/files/${card.file_path}.pdf&video_link=${card.video_link}`} passHref ><button>أبدأ الدرس</button></Link>
                     </div>
                   </div>
                 )
