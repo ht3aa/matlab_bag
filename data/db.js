@@ -5,7 +5,7 @@ export const db = {
             lesson_name: "مقدمة الجزء الأول",
             lesson_number: "#0",
             description: "مقدمة عن برنامج الماتلاب. أنواع أستخدامات الشائعة للماتلاب. قوة أستخدام الماتلاب. و غيرها الكثير",
-            file_path: "introduction",
+            file_path: "introduction_matlab",
             video_link: "https://www.youtube.com/embed/B0YfQPZuTjk",
         },
         {
@@ -13,7 +13,7 @@ export const db = {
             lesson_name: "مقدمة الجزء الثاني",
             lesson_number: "#1",
             description: "مقدمة عن برنامج الماتلاب. أنواع أستخدامات الشائعة للماتلاب. قوة أستخدام الماتلاب. و غيرها الكثير",
-            file_path: "introduction",
+            file_path: "introduction_matlab",
             video_link: "https://www.youtube.com/embed/w26NrE9KZbM",
         },
         {
@@ -21,7 +21,7 @@ export const db = {
             lesson_name: "الدرس الأول",
             lesson_number: "#2",
             description: "في هذا الدرس سنتكلم عن العمليات الرياضية في برنامج الماتلاب مع أمثلة لتوضيح ذلك.",
-            file_path: "Lecture_1",
+            file_path: "Lecture_1_matlab",
             video_link: "https://www.youtube.com/embed/Clq0An1VGlc",
         },
         {
@@ -29,7 +29,7 @@ export const db = {
             lesson_name: "الدرس الثاني",
             lesson_number: "#3",
             description: "في هذا الدرس سنتكلم عن أساسيات التخطيط و كيفية التلاعب و أضافة خصائص مختلفة للمخطط.",
-            file_path: "Lecture_2",
+            file_path: "Lecture_2_matlab",
             video_link: "https://www.youtube.com/embed/l5PGa2axt98",
         },
         {
@@ -37,7 +37,7 @@ export const db = {
             lesson_name: "الدرس الثالث",
             lesson_number: "#4",
             description: "في هذا الدرس سنتكلم عن المتجهات و المصفوفات حيث يعتبران من أهم المواضيع في برنامج الماتلاب",
-            file_path: "Lecture_3",
+            file_path: "Lecture_3_matlab",
             video_link: "https://www.youtube.com/embed/RPDSU_naJag",
         },
     ]
