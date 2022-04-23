@@ -27,31 +27,29 @@ export default function Home() {
         <i className="fa-solid fa-arrow-down"></i>
       </header>
       <main id="files" className={homeStyles.mainContainer}>
-      {parts.map((part, index) => {
-        return (
-          <div key={index}>
-            <div className={homeStyles.title}><h3>{ part }</h3></div>
-            <div className={homeStyles.cardContainer}>
-              {db[part].map(card => {
-                return (
-                  <div key={card.id} className={homeStyles.card}>
-                    <div className={homeStyles.cardImg}>
-                      <div className={homeStyles.cardOverlay}><h5>{ card.lesson_number }</h5></div>
+        {parts.map((part, index) => {
+          return (
+            <div key={index}>
+              <div className={homeStyles.title}><h3>{ part }</h3></div>
+              <div className={homeStyles.cardContainer}>
+                {db[part].map(card => {
+                  return (
+                    <div key={card.id} className={homeStyles.card}>
+                      <div className={homeStyles.cardImg}>
+                        <div className={homeStyles.cardOverlay}><h5>{ card.lesson_number }</h5></div>
+                      </div>
+                      <div className={homeStyles.cardContent}>
+                        <h4>{ card.lesson_name }</h4>
+                        <p>{ card.description }</p>
+                        <Link href={`/lecture?file=/files/${card.file_path}.pdf&video_link=${card.video_link}`} passHref ><button>أبدأ الدرس</button></Link>
+                      </div>
                     </div>
-                    <div className={homeStyles.cardContent}>
-                      <h4>{ card.lesson_name }</h4>
-                      <p>{ card.description }</p>
-                      <Link href={`/lecture?file=/files/${card.file_path}.pdf&video_link=${card.video_link}`} passHref ><button>أبدأ الدرس</button></Link>
-                    </div>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
             </div>
-          </div>
-
-        )
-      })}
-        
+          )
+        })}
       </main>
       <footer></footer>
     </>

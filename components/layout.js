@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./navbar/navBar";
-
 
 
 export default function Layout({ children }) {

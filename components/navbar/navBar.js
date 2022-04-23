@@ -1,19 +1,19 @@
 import navBarStyles from "../../styles/Navbar.module.css";
-import Image from "next/image";
 import toggleHamAnimation from "./hamAnimationController";
-import { useRef } from "react";
-import { useState } from "react";
 import makeItActive from "./makeItActive";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/dist/client/link";
-import { useEffect } from "react";
+import Image from "next/image";
+
 
 export default function NavBar() {
-    const [showNavigationList, setShowNavigationList] = useState(false);
+    const [showMobileNavigationList, setShowMobileNavigationList] = useState(false);
     const [navAcitveClass, setNavActiveClass] = useState(" navigationActive");
     const hamContainerRef = useRef();
+
     function toggleHamAndShowHam() {
         toggleHamAnimation(hamContainerRef.current);
-        setShowNavigationList(!showNavigationList);
+        setShowMobileNavigationList(!showMobileNavigationList);
     }
 
     useEffect(() => {
@@ -40,7 +40,7 @@ export default function NavBar() {
                     </div>
                 <div className="hide"></div>
             </div>
-            {showNavigationList && <nav className={navBarStyles.mobileNavigationList}>
+            {showMobileNavigationList && <nav className={navBarStyles.mobileNavigationList}>
                 <ul className={navBarStyles.mobileNavigationListUl}>
                     <Link href='/'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph + navAcitveClass}>الصفحة الرئيسية</p></li></Link>
                     <Link href='/aboutUs'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph}>من نحن</p></li></Link>
