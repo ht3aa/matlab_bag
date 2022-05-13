@@ -21,8 +21,9 @@ export default function NavBar() {
             setNavActiveClass(" ");
         }
     }, [])
+    
     return (
-        <div className={navBarStyles.navbar}>
+        <nav className={navBarStyles.navbar}>
             <div className={navBarStyles.logoBox}>
                 <Image src="/university.png" alt="Logo" width={50} height={50}/> 
                 <p>كلية الأمام الكاظم/قسم هندسة تقنيات الحاسوب</p>       
@@ -46,6 +47,6 @@ export default function NavBar() {
                     <Link href='/aboutUs'><li onClick={toggleHamAndShowHam}><p className={navBarStyles.navigationListParagraph}>من نحن</p></li></Link>
                 </ul>
             </nav>}
-        </div>
+        </nav>
     )
 }

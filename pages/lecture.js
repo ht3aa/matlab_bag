@@ -6,7 +6,7 @@ export default function Lecture() {
   const { file, video_link } = route.query;
 
   return (
-    <div className={lectureStyles.container}>
+    <section className={lectureStyles.container}>
       <button onClick={() => route.push('/')} className="backButton">
         <i className="fa-solid fa-arrow-left"></i>
       </button>
@@ -19,7 +19,7 @@ export default function Lecture() {
           <i className="fa-solid fa-download"></i>
         </button>
       </a>
-    </div>
+    </section>
       
   )
 }
