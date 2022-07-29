@@ -1,10 +1,11 @@
 # Matlab Bag
 
-A website that contains files and videos which explain Matlab software easily and simply.
+A [website](https://matlab-bag.vercel.app/) that contains files and videos which explain Matlab software easily and simply.
 
 ## Tools
 
-[Nuxt.js](https://nextjs.org/) React framework
+1. [Nuxt.js](https://nextjs.org/) React framework
+2. [Vercel](https://vercel.com/) For hosting
 
 ## Note
 
